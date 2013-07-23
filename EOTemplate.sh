@@ -8,6 +8,12 @@ fi
 
 appname=$1
 
+if [ -d $appname ];
+then
+    echo "the same name exits, please rename the application"
+    exit -1;
+fi
+
 mkdir $appname
 cd $appname
 mkdir doc
